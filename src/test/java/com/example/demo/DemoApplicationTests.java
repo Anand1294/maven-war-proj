@@ -10,7 +10,7 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 		//Assertions.assertDoesNotThrow(this::doNotThrowException);
-		assert.assertNotNull("The object you enter return null", str1);
+		//assert.assertNotNull("The object you enter return null", str1);
 		//assertNotNull(123);
 	}
 
