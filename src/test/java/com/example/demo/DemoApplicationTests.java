@@ -9,6 +9,7 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 		//Assertions.assertDoesNotThrow(this::doNotThrowException);
+		assertNotNull(123);
 	}
 
 	private void doNotThrowException(){
