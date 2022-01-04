@@ -21,8 +21,7 @@ pipeline {
             steps {
                 script {
                     sh 'chmod -R +x /var/jenkins_home/workspace/'
-                    sh './mvnw clean install'
-                    
+                    sh './mvnw clean install'           
                 }
                 archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
