@@ -9,12 +9,8 @@ class DemoApplicationTests {
 	String str1 ="Hello";
 	@Test
 	void contextLoads() {
-		//Assertions.assertDoesNotThrow(this::doNotThrowException);
-		//assert.assertNotNull("The object you enter return null", str1);
-		//assertNotNull(123);
-		//assert message == "Hello";
-		System.out.println(str1);
-			
+		DemoApplication demoapp = new DemoApplication();
+		demoapp.doSomething();	
 	}
 
 	private void doNotThrowException(){
