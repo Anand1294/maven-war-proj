@@ -10,9 +10,8 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 	
-	public void doSomething() {
-		// TODO Auto-generated method stub
-		System.out.println("Hello");
+	public int doSomething(int a, int b) {
+		return a+b;
 		
 	}
 
