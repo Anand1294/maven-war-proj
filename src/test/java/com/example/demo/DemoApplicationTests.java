@@ -12,8 +12,8 @@ class DemoApplicationTests {
 		//Assertions.assertDoesNotThrow(this::doNotThrowException);
 		//assert.assertNotNull("The object you enter return null", str1);
 		//assertNotNull(123);
-		assert message == "Hello";
-		System.out.println(message);
+		//assert message == "Hello";
+		System.out.println(str1);
 			
 	}
 
