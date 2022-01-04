@@ -20,7 +20,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'chmod +x /var/jenkins_home/workspace/maven-war-pipeline/mvnw'
+                    sh 'chmod -R +x /var/jenkins_home/workspace/'
                     sh './mvnw clean install'
                     
                 }
