@@ -10,7 +10,9 @@ class DemoApplicationTests {
 	@Test
 	void contextLoads() {
 		DemoApplication demoapp = new DemoApplication();
-		demoapp.doSomething();	
+		
+		int result = demoapp.doSomething(1, 2);
+		assertEquals(3,result);	
 	}
 
 	private void doNotThrowException(){
