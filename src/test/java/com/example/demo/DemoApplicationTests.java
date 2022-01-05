@@ -44,7 +44,7 @@ class DemoApplicationTests {
 		DemoApplication demoapp = new DemoApplication();
 		
 		int result = demoapp.div(2, 1);
-		assertEquals(1,result);	
+		assertEquals(2,result);	
 	}
 
 	private void doNotThrowException(){
