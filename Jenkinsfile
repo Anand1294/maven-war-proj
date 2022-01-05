@@ -22,7 +22,7 @@ pipeline {
                 script {
                     sh 'chmod -R +x /var/jenkins_home/workspace/'
                     sh './mvnw clean install'        
-                    jacoco buildOverBuild: true, changeBuildStatus: true, deltaBranchCoverage: '40', deltaClassCoverage: '40', deltaComplexityCoverage: '40', deltaInstructionCoverage: '40', deltaLineCoverage: '40', deltaMethodCoverage: '40', maximumMethodCoverage: '2'//, minimumMethodCoverage: '1'
+                    jacoco buildOverBuild: true, changeBuildStatus: true, deltaBranchCoverage: '40', deltaClassCoverage: '40', deltaComplexityCoverage: '40', deltaInstructionCoverage: '40', deltaLineCoverage: '40', deltaMethodCoverage: '40'//, maximumMethodCoverage: '2', minimumMethodCoverage: '1'
                 }
                 archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
@@ -53,7 +53,7 @@ pipeline {
     post {
         always {
             //junit 'build/test-results/**/*.xml'
-            junit allowEmptyResults: true, testResults: '**/test-reports/**/*.xml'
+            junit allowEmptyResults: true, testResults: 'target/**/*.xml'
         }
         success {
             mail body: "This is Jenkins Mail.\n${env.JOB_NAME} run successful.\nPlease verify the build result using the mentioned link : ${url}.\n\nThe job can also be accessed using the mentioned link : ${env.JOB_DISPLAY_URL}",
