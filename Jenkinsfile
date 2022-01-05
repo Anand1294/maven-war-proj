@@ -21,7 +21,8 @@ pipeline {
             steps {
                 script {
                     sh 'chmod -R +x /var/jenkins_home/workspace/'
-                    sh './mvnw clean install'           
+                    sh './mvnw clean install'        
+                    jacoco buildOverBuild: true, changeBuildStatus: true, deltaBranchCoverage: '40', deltaClassCoverage: '40', deltaComplexityCoverage: '40', deltaInstructionCoverage: '40', deltaLineCoverage: '40', deltaMethodCoverage: '40', maximumMethodCoverage: '2'//, minimumMethodCoverage: '1'
                 }
                 archiveArtifacts artifacts: 'target/*.war', fingerprint: true
             }
