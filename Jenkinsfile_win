@@ -52,8 +52,8 @@ pipeline {
     }
     post {
         always {
-            //junit 'build/test-results/**/*.xml'
-            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+            junit 'target/surefire-reports/*.xml'
+            //junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
         success {
             mail body: "This is Jenkins Mail.\n${env.JOB_NAME} run successful.\nPlease verify the build result using the mentioned link : ${url}.\n\nThe job can also be accessed using the mentioned link : ${env.JOB_DISPLAY_URL}",
