@@ -34,12 +34,12 @@ pipeline {
                         bat 'C:/Users/ASUS/.jenkins/workspace/pipeline-build-deploy/mvnw sonar:sonar'
                     }
                     
-                    timeout(time: 1, unit: 'MINUTES') {
+                    /*timeout(time: 1, unit: 'MINUTES') {
                         def qualityGate = waitForQualityGate()
                         if (qualityGate.status != 'OK') {
                             error "Pipeline aborted due to quality gate failure"
                         }
-                    }
+                    }*/
                 }
             }
         }
