@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv('sonarqube'){
-                        bat 'C:\Users\ASUS\.jenkins\workspace\pipeline-build-deploy\mvnw sonar:sonar'
+                        bat 'C:/Users/ASUS/.jenkins/workspace/pipeline-build-deploy/mvnw sonar:sonar'
                     }
                     
                     timeout(time: 1, unit: 'MINUTES') {
