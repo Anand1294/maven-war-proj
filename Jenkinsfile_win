@@ -55,7 +55,7 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
             //junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
         }
-        success {
+        /*success {
             mail body: "This is Jenkins Mail.\n${env.JOB_NAME} run successful.\nPlease verify the build result using the mentioned link : ${url}.\n\nThe job can also be accessed using the mentioned link : ${env.JOB_DISPLAY_URL}",
                 subject: "Jenkins Success Build ${env.JOB_NAME}",
                 to: "shubhamgke1203@gmail.com" 
@@ -64,6 +64,6 @@ pipeline {
             mail body: "This is Jenkins Mail.\n${env.JOB_NAME} execution failed.\nPlease verify and troubleshoot the build result using the mentioned link : ${url}.\n\nThe job can also be accessed using the mentioned link : ${env.JOB_DISPLAY_URL}",
                 subject: "Jenkins Fail Build ${env.JOB_NAME}",
                 to: "shubhamgke1203@gmail.com" 
-        }
+        }*/
     }
 }
